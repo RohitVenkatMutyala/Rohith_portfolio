@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="portfolio.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <script defer src="portfolio.js"></script>
+   
+    <title>Document</title>
+    <style>
+        .status-message {
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            display: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .success {
+            background-color: rgba(50, 205, 50, 0.2);
+            color: #2e7d32;
+            border: 1px solid #2e7d32;
+        }
+        
+        .error {
+            background-color: rgba(244, 67, 54, 0.2);
+            color: #c62828;
+            border: 1px solid #c62828;
+        }
+        
+        .sending {
+            background-color: rgba(3, 169, 244, 0.2);
+            color: #0277bd;
+            border: 1px solid #0277bd;
+        }
+    
+        #contact-form button[disabled] {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <main>
+        <aside>
+            <ul class="Links">
+                <li onclick="Navigate(0)" class="activeLink"><i class="fa-solid fa-house"></i>
+                    <p>Home</p>
+                </li>
+                <li onclick="Navigate(1)"><i class="fa-solid fa-user" ></i>
+                    <p>About Me</p>
+                </li>
+                <li onclick="Navigate(2)"><i class="fa-solid fa-list"></i>
+                    <p>Skills</p>
+                </li>
+                <li onclick="Navigate(3)"><i class="fa-solid fa-images"></i>
+                    <p>Gallery</p>
+                </li>
+                <li onclick="Navigate(4)"><i class="fa-solid fa-comments"></i>
+                    <p>Contact Me</p>
+                </li>
+            </ul>
+        </aside>
+        <div class="swiper mySwiper">
+            <div class="SlideContainer swiper-wrapper">
+                <div class="swiper-slide home-slide">
+                    <div class="HomeContent">
+                        <h1>Hi! I'm <span class="stylized-name">Rohith Venkat </span>,</h1>
+                        <h2>A <span class="proffesions">UI/UX Designer</span></h2>
+                        <p class="heroline">This is my portfolio</p>
+                        <div class="buttonGroup">
+                            <li onclick="Navigate(1)">
+                                <button>about me </button>
+                            </li>
+                            <li onclick="Navigate(4)">
+                                <button>Contact Me</button>
+                            </li>
+                          </div>
+                    </div>
+                    <div class="SideImg">
+                        <div class="top-right-corner">
+                            <hr class="hr1">
+                            <hr class="hr2">
+                        </div>
+                        <img src="pfimages/Rohith.jpg" alt="">
+                        <div class="bottom-left-corner">
+                            <hr class="hr1">
+                            <hr class="hr2">
+                        </div>
+                    </div>
+                    <p class="slide-help">Scroll for next slide <i class="fa-solid fa-chevron-right fa-shake"></i>
+                    </p>
+                </div>
+                <div class="swiper-slide">
+                    <div class="about-us">
+                    <h1 class="heading">About Me</h1>
+                    <h3 class="sub-heading">I'm Rohith Venkat, <span class="proffesions">Pursuing Computer Science at IITT </span></h3>
+                    <p class="aboutme-deatils">
+Here you can see all my achievements and experiences
+                    </p>
+                    <div class="about-me-divison">
+                        <div class="about-me-table">
+                            <li><span>Experience:</span> Worked on multiple group projects, now showcased on my GitHub — focused on software development, collaboration, and real-world problem solving</li>
+                            <li><span>Country:</span> India</li>
+                           
+                            <li><span>My projects :</span><a href="https://github.com/RohitVenkatMutyala/" style="text-decoration: none; color: white;">Github</a></li>
+                            <li><span>Age</span>:19</li>
+                            <li><span>Phone</span>:6300851811</li>
+                           
+                            <li><span>Degree</span>:An undergraduate student in the CSE department at IITT</li>
+                            <div class="buttonGroup">
+                                <li onclick="Navigate(2)">
+                                    <button>About My Skills</button>
+                                </li>
+                                <li onclick="Navigate(4)">
+                                    <button>Contact Me</button>
+                                </li>
+                               </div>
+                        </div>
+
+                        <div class="skill-bar">
+                            <li>
+                                <p>HTML</p>
+                                <div class="bar">
+                                    <div class="active-bar" style="width:99%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>CSS</p>
+                                <div class="bar">
+                                    <div class="active-bar" style="width:80%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>JavaScript</p>
+                                <div class="bar">
+                                    <div class="active-bar" style="width:85%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Python</p>
+                                <div class="bar">
+                                    <div class="active-bar" style="width:50%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>C++</p>
+                                <div class="bar">
+                                    <div class="active-bar" style="width:70%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Java</p>
+                                <div class="bar">
+                                    <div class="active-bar" style="width:70%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>React</p>
+                                <div class="bar">
+                                    <div class="active-bar" style="width:50%"></div>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+                </div></div>
+                <div class="swiper-slide services">
+
+                    <h1 class="heading">Skills</h1>
+                    <div class="service">
+                        <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+                        <h2>Web Design</h2>
+                        <p></p>
+                    </div>
+                    <div class="service">
+                        <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
+                        <h2>Web Development</h2>
+                        <p></p>
+                    </div>
+                    <div class="service">
+                        <div class="service-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <h2>App Development</h2>
+                        <p></p>
+                    </div>
+                    <div class="service">
+                        <div class="service-icon"><i class="fa-solid fa-image"></i></div>
+                        <h2>UI/UX designer</h2>
+                        <p></p>
+                    </div>
+                    <div class="service">
+                        <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                        <h2>Software Tool Development</h2>
+                        <p></p>
+                    </div>
+                    <div class="service">
+                        <div class="service-icon"><i class="fa-solid fa-game"></i></div>
+                        <h2>Game Development</h2>
+                            
+                    </div>
+                    
+                </div>
+                <div class="swiper-slide gallery">
+                    <h1 class="heading">Gallery</h1>
+                  
+                    <div class="project"><img src="pfimages/w1.jpg" alt=""></div>
+                    <div class="project"><img src="pfimages/w2.jpg" alt=""></div>
+                    <div class="project"><img src="pfimages/w3.jpg" alt=""></div>
+                    <div class="project"><img src="pfimages/w4.jpg" alt=""></div>
+                   
+                </div>
+                <div class="swiper-slide contactMe">
+                    <h1 class="heading">Contact Me</h1>
+                    <br><br>
+                    <div class="contactinfo"><i class="fa-solid fa-phone"></i>
+                        <h3>Mobile No</h3>
+                        <p>6300851811</p>
+                        <br>
+                    </div>
+                  <br>
+                    <div class="contactinfo"><i class="fa-regular fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>rohithvenkatmutyala@gmail.com</p>
+                        <br>
+                    </div>
+                    
+                
+                   
+                    <form id="contact-form">
+                        <h2>Send Me A Message 
+                            <div class="SocialLinks">
+                                <i class="fa-brands fa-codepen"></i>
+                                <i  class="fa-brands fa-instagram"></i>
+                            
+                                <i class="fa-brands fa-facebook"></i>
+                                
+                            </div>
+                        </h2>
+                        <input type="text" id="user_name" name="user_name" placeholder="Name" required>
+                        <input type="email" id="user_email" name="user_email" placeholder="Email" required>
+                        
+                        <textarea rows="10" id="message" name="message" placeholder="Type your Message Here..." required></textarea>
+                        <button type="submit" class="primary">Send</button>
+                        <div id="status-message" class="status-message"></div>
+                    </form>
+                  
+                </div>
+            </div>
+    </main>
+<!-- EmailJS library -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<!-- Your custom script for EmailJS integration -->
+<script>
+    (function() {
+        // Replace with your EmailJS user ID, service ID, and template ID
+        const emailjsConfig = {
+            userID: "f2rgOvTwBew89578f",
+            serviceID: "service_sxw1v0t",
+            templateID: "template_tienmcd"
+        };
+        
+        // Initialize EmailJS
+        emailjs.init(emailjsConfig.userID);
+        
+        // Get the form element
+        const contactForm = document.getElementById('contact-form');
+        
+        // Add submit event listener
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                // Get the status message element
+                const statusMessage = document.getElementById('status-message');
+                
+                // Get the submit button
+                const submitButton = contactForm.querySelector('button[type="submit"]');
+                
+                // Show sending message
+                statusMessage.className = 'status-message sending';
+                statusMessage.textContent = 'Sending message...';
+                statusMessage.style.display = 'block';
+                
+                // Disable the submit button
+                submitButton.disabled = true;
+                
+                // Prepare template parameters
+                const templateParams = {
+                    from_name: document.getElementById('user_name').value,
+                    from_email: document.getElementById('user_email').value,
+                    message: document.getElementById('message').value,
+                    to_name: "Venumadhav" // Your name or recipient name
+                };
+                
+                // Send email using EmailJS
+                emailjs.send(
+                    emailjsConfig.serviceID,
+                    emailjsConfig.templateID,
+                    templateParams
+                ).then(function(response) {
+                    // Success message
+                    statusMessage.className = 'status-message success';
+                    statusMessage.textContent = 'Message sent successfully!';
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Enable submit button
+                    submitButton.disabled = false;
+                    
+                    // Hide status message after 5 seconds
+                    setTimeout(function() {
+                        statusMessage.style.display = 'none';
+                    }, 5000);
+                    
+                }).catch(function(error) {
+                    // Error message
+                    statusMessage.className = 'status-message error';
+                    statusMessage.textContent = 'Failed to send message. Please try again.';
+                    
+                    // Enable submit button
+                    submitButton.disabled = false;
+                    
+                    console.error('EmailJS error:', error);
+                });
+            });
+        }
+    })();
+    </script>
+</body>
+</html>
